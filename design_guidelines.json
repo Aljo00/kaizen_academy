@@ -1,0 +1,177 @@
+{
+  "theme_and_archetype": {
+    "theme": "Light",
+    "archetype": "High-End Education Startup (Editorial Scholastic + Swiss Modernity)",
+    "description": "A world-class, premium educational platform mimicking top ed-tech startups (Xylem, PW) but maintaining a unique premium identity. Trustworthy, academic, highly modern, using editorial serif headings and sleek sans-serif body text."
+  },
+  "colors": {
+    "primary": "#1D4ED8",
+    "secondary": "#F43F5E",
+    "accent_indigo": "#4F46E5",
+    "accent_purple": "#7C3AED",
+    "primary_gradient": "linear-gradient(135deg, #2563EB, #7C3AED, #F43F5E)",
+    "background": {
+      "default": "#FAFAFA",
+      "paper": "#FFFFFF",
+      "subtle": "#F1F5F9",
+      "dark_section": "#0F172A"
+    },
+    "text": {
+      "primary": "#0F172A",
+      "secondary": "#475569",
+      "inverse": "#FFFFFF",
+      "brand": "#1D4ED8"
+    },
+    "surface": {
+      "glass": "rgba(255, 255, 255, 0.7)",
+      "glass_border": "rgba(255, 255, 255, 0.4)",
+      "card_border": "rgba(15, 23, 42, 0.05)"
+    }
+  },
+  "typography": {
+    "font_families": {
+      "heading": "'Fraunces', serif",
+      "body": "'Outfit', sans-serif",
+      "mono": "'JetBrains Mono', monospace"
+    },
+    "hierarchy": {
+      "h1": "text-5xl sm:text-6xl+ font-light tracking-tight",
+      "h2": "text-4xl sm:text-5xl font-light tracking-tight",
+      "h3": "text-2xl sm:text-3xl font-normal",
+      "body_large": "text-lg text-secondary leading-relaxed",
+      "body_base": "text-base text-secondary leading-relaxed",
+      "overline": "text-xs font-bold uppercase tracking-[0.2em] text-primary"
+    },
+    "google_fonts_url": "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&family=Outfit:wght@300;400;500;600&display=swap"
+  },
+  "spacing_and_layout": {
+    "container_padding": "px-6 md:px-12 lg:px-24",
+    "section_spacing": "py-20 md:py-32",
+    "grid_patterns": {
+      "bento_features": "grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8",
+      "masonry_gallery": "columns-1 md:columns-2 lg:columns-3 gap-6"
+    },
+    "border_radius": {
+      "card": "rounded-2xl",
+      "button": "rounded-full",
+      "badge": "rounded-full"
+    }
+  },
+  "motion_and_interactions": {
+    "scroll": "Lenis Smooth Scrolling for premium momentum feel",
+    "triggers": "GSAP ScrollTrigger for stagger fade-ins on sections",
+    "micro": "Framer Motion for hover states, button presses, and text reveal animations",
+    "cursor": "Custom cursor (optional, subtle dot with trailing ring)",
+    "loading": "Premium academic text reveal loading screen",
+    "hover_states": "Cards lift slightly (-translate-y-1) with increased shadow; buttons scale up slightly and increase brightness."
+  },
+  "components": {
+    "navbar": "Glassmorphism sticky header: `fixed top-0 w-full z-50 backdrop-blur-xl bg-white/80 border-b border-black/5`. Contains Logo, Links, and CTA button.",
+    "hero": "Premium minimalist layout. Overline label, large Fraunces H1, Outfit description. Interactive 3D particle background (using tsparticles or Three.js) representing 'learning connections'. Primary gradient applied subtly to text or button. Animated counters for stats.",
+    "cards": "White background, subtle `shadow-sm`, 1px border (`border-slate-100`). Include padding `p-8`. Icon in top left with subtle Rose Pink or Indigo background.",
+    "buttons": {
+      "primary": "Solid Royal Blue background, white text, rounded-full. Hover: lifts up, shadow-lg.",
+      "secondary": "Outline button with Royal Blue border and text, rounded-full. Hover: bg-blue-50.",
+      "gradient_accent": "Use the primary_gradient for special 'Apply Now' or highlight buttons. Text white."
+    },
+    "floating_actions": "Fixed bottom-right column of circular buttons: WhatsApp, Call, Instagram. Use subtle drop shadows and hover scale."
+  },
+  "page_blueprints": {
+    "Home": {
+      "sections": [
+        "Hero: 3D interactive bg, bold value proposition, 'Admissions Open' badge, CTA",
+        "Stats: Animated counters (Students, Years, Ranks) overlapping the hero/next section",
+        "About Teaser: Mission statement, link to full About",
+        "Courses Grid: 4 categories (School, Commerce, Professional, Medical) in bento-style cards",
+        "Why Choose Us: Animated staggered feature cards",
+        "Testimonials: Slider/Carousel of student success stories",
+        "CTA Section: Dark background section (#0F172A) with the primary gradient used as an accent border or text clip. Admission enquiry trigger."
+      ]
+    },
+    "About": {
+      "sections": [
+        "Hero: Deep blue background with large typography and Founder's quote",
+        "Founder Message: Two-column layout (Text left, Founder Image right with subtle parallax)",
+        "Vision & Mission: Clean typography blocks",
+        "Campus Gallery: Masonry grid with Lightbox capability using the provided campus photos",
+        "Social Proof: Instagram/YouTube feeds or links"
+      ]
+    },
+    "Courses": {
+      "sections": [
+        "Hero: Simple header with 'Our Programs'",
+        "Tabs/Filter: Filter by School, Commerce, Professional, Medical",
+        "Course Cards: Detailed cards with syllabus highlights, eligibility, and 'Apply Now' button"
+      ]
+    },
+    "Contact": {
+      "sections": [
+        "Header: 'Get in Touch'",
+        "Content Split: Left - Contact details (Address, Phone, Email, Social links) + Google Maps embed. Right - Admission Enquiry Form (Shadcn customized)"
+      ]
+    }
+  },
+  "media_urls": {
+    "logos": [
+      {
+        "url": "https://customer-assets.emergentagent.com/job_kaizen-premium/artifacts/sa8sjh89_image.png",
+        "description": "Kaizen Academy Main Logo",
+        "category": "header, footer"
+      }
+    ],
+    "people": [
+      {
+        "url": "https://customer-assets.emergentagent.com/job_kaizen-premium/artifacts/crf7e7v1_image.png",
+        "description": "Founder of Kaizen Academy",
+        "category": "about_page, founder_message"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1692269725911-87697c558be1",
+        "description": "Indian students studying in class",
+        "category": "home_page, testimonials, gallery"
+      }
+    ],
+    "campus": [
+      {
+        "url": "https://customer-assets.emergentagent.com/job_kaizen-premium/artifacts/n1xwe6l9_image.png",
+        "description": "Kaizen Academy Campus 1",
+        "category": "gallery, hero_background_fallback"
+      },
+      {
+        "url": "https://customer-assets.emergentagent.com/job_kaizen-premium/artifacts/yimmtaii_image.png",
+        "description": "Kaizen Academy Campus 2",
+        "category": "gallery, about_page"
+      },
+      {
+        "url": "https://customer-assets.emergentagent.com/job_kaizen-premium/artifacts/x86copis_image.png",
+        "description": "Kaizen Academy Campus 3",
+        "category": "gallery, contact_page"
+      },
+      {
+        "url": "https://images.pexels.com/photos/27907978/pexels-photo-27907978.jpeg",
+        "description": "Modern campus building exterior",
+        "category": "gallery, courses_bg"
+      }
+    ],
+    "abstract": [
+      {
+        "url": "https://images.unsplash.com/photo-1655635643486-a17bc48771ff",
+        "description": "Abstract technology / academic network background",
+        "category": "hero_fallback, cta_background"
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "CRITICAL: Use pure valid React code with Tailwind classes. Implement the routing for Home, About, Courses, Contact.",
+    "Implement Lenis for smooth scrolling in the main App wrapper.",
+    "Use Framer Motion for text reveals (stagger children) and card entrances when scrolling into view.",
+    "Implement an interactive background in the Hero section. You can use 'react-tsparticles' or a custom Three.js canvas if possible. Keep it subtle, professional, with slow moving nodes or waves.",
+    "Do NOT use Inter, Roboto, or Space Grotesk. Use Fraunces for headings and Outfit for body. Load them via Google Fonts in index.css.",
+    "Use Royal Blue (#1D4ED8) as the primary solid color for buttons and highlights. Use the primary_gradient sparingly (e.g., text-transparent bg-clip-text for a special keyword, or border gradients).",
+    "Ensure all interactive elements have `data-testid` attributes (e.g., `data-testid=\"nav-home-link\"`, `data-testid=\"apply-button\"`).",
+    "Never use placeholder image URLs. Rely exclusively on the provided `media_urls`.",
+    "Apply generous padding (p-12, p-24) to sections to maintain the premium, high-end feel.",
+    "The Admission form should use Shadcn form components, customized with rounded-xl inputs and subtle borders.",
+    "For the campus gallery, implement a CSS columns masonry layout."
+  ]
+}
