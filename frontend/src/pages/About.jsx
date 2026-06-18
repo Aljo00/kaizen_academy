@@ -97,7 +97,7 @@ export default function About() {
             <h2 className="font-display mt-4 text-4xl sm:text-5xl font-light tracking-tight text-slate-900">Where great learning happens.</h2>
           </div>
           <div className="mt-12 columns-1 md:columns-2 lg:columns-3 gap-5">
-            {ASSETS.campus.map((src, i) => (
+            {[...ASSETS.campus, ...ASSETS.activities.map(a => a.src)].map((src, i) => (
               <div key={src} className="mb-5 break-inside-avoid group rounded-2xl overflow-hidden bg-slate-100 border border-slate-100" data-testid={`about-campus-${i}`}>
                 <img src={src} alt="campus" loading="lazy" className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" />
               </div>

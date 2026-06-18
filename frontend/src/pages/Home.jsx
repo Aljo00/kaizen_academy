@@ -167,7 +167,7 @@ export default function Home() {
             <p className="mt-4 text-slate-600">A calm, well-lit, distraction-free campus engineered for deep focus.</p>
           </div>
           <div className="mt-14 columns-1 md:columns-2 lg:columns-3 gap-5 [column-fill:_balance]">
-            {ASSETS.campus.map((src, i) => (
+            {[...ASSETS.campus, ...ASSETS.activities.map(a => a.src)].map((src, i) => (
               <motion.div key={src} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: (i % 3) * 0.08 }}
                 className="mb-5 break-inside-avoid relative group overflow-hidden rounded-2xl border border-slate-100 bg-slate-100"
                 data-testid={`campus-img-${i}`}>
@@ -243,7 +243,9 @@ export default function Home() {
             <div className="flex items-center gap-1 text-amber-400">{Array(5).fill(0).map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}</div>
             <p className="mt-5 font-display text-2xl md:text-3xl font-light text-slate-900 leading-snug">"{TESTIMONIALS[tIndex].text}"</p>
             <div className="mt-7 flex items-center gap-4">
-              <img src={TESTIMONIALS[tIndex].avatar} alt={TESTIMONIALS[tIndex].name} className="h-12 w-12 rounded-full object-cover" />
+              <div className="h-12 w-12 rounded-full ka-gradient text-white flex items-center justify-center font-display text-lg font-medium shadow-md">
+                {TESTIMONIALS[tIndex].name.split(' ').map(n => n[0]).join('').slice(0, 2)}
+              </div>
               <div>
                 <div className="font-medium text-slate-900">{TESTIMONIALS[tIndex].name}</div>
                 <div className="text-xs text-slate-500">{TESTIMONIALS[tIndex].role}</div>
