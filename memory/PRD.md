@@ -1,0 +1,50 @@
+# Kaizen Academy Thrithala — PRD
+
+## Original Problem Statement
+Build a world-class, premium, modern educational institution website for Kaizen Academy Thrithala, comparable to Xylem, PW, Eduport — premium ed-tech startup feel with cinematic motion, conversion focus, multi-page (Home/About/Courses/Contact), Resend-powered admission enquiry form.
+
+## Architecture
+- **Frontend**: React 19 (CRA) + Tailwind + Shadcn primitives + Framer Motion + Lenis smooth scroll + custom canvas particle network
+- **Backend**: FastAPI on :8001 with `/api` prefix, MongoDB (motor)
+- **Email**: Resend (`auth.classvia.in` sender domain, recipient `kaizenacademy5@gmail.com`)
+- **Routing**: react-router-dom v7 — `/`, `/about`, `/courses`, `/contact`
+
+## User Personas
+- Parents researching coaching for Class 8–12 / CA / commerce / B.Pharm
+- Students self-discovering programs and applying
+- Visitors connecting via WhatsApp / Instagram / phone
+
+## Core Requirements (Static)
+- Premium animated multi-page site
+- Admission enquiry form → DB + email
+- WhatsApp / Call / Instagram floating actions
+- Google Maps embed on Contact
+- Mobile responsive
+- SEO meta tags
+
+## What's Implemented (16 Jun 2026)
+- ✅ Hero with canvas particle-network background + animated counters
+- ✅ Glassmorphism sticky navbar with mobile drawer
+- ✅ Premium loading screen with gradient logo reveal
+- ✅ Scroll progress bar (top)
+- ✅ Lenis smooth scrolling sitewide
+- ✅ Home: hero, stats, about teaser, 4 course category cards, masonry campus gallery, dark "why choose us" grid, founder section, testimonials slider with dots, social proof cards (Instagram/YouTube/Facebook), full-gradient admission CTA
+- ✅ About page: founder section, values grid, animated stats, campus gallery
+- ✅ Courses page: filter pills + 4 detailed program cards
+- ✅ Contact page: contact details, social, Google Maps embed iframe, admission enquiry form with validation, sonner toasts, success banner
+- ✅ FloatingActions FAB (WhatsApp/Call/Instagram) with pulse animation
+- ✅ Footer with logo, quick links, programs, contact, social
+- ✅ Backend `POST /api/admission-enquiry` → MongoDB insert + Resend email (graceful failure handling)
+- ✅ Backend `GET /api/admission-enquiries` admin list endpoint
+- ✅ Fonts: Fraunces (display) + Outfit (body)
+- ✅ Tested: 100% backend, 100% frontend pass (iteration_1.json)
+- ✅ Confirmed: Resend email actually delivered
+
+## Backlog (P0 → P2)
+- P1: Admin dashboard to view enquiries (currently only GET endpoint, no UI)
+- P1: Live Instagram/YouTube feed embed (currently links only)
+- P2: Replace stock student avatars in testimonials with real Kaizen students
+- P2: Add blog/news section for SEO content
+- P2: Multi-language (Malayalam) toggle
+- P2: Online fee payment / razorpay
+- P2: Domain verification reminder if Resend domain ever unverifies
