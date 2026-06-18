@@ -26,9 +26,7 @@ export const ASSETS = {
   logo: `${A}/sa8sjh89_image.png`,
   founder: `${A}/crf7e7v1_image.png`,
   campus: [
-    `${A}/n1xwe6l9_image.png`,
-    `${A}/yimmtaii_image.png`,
-    `${A}/x86copis_image.png`,
+    `${A}/rvqpr0rg_image.png`,
   ],
   activities: [
     { src: `${A}/hrxc4kpi_Photo%201.jpeg`, caption: 'Classroom in session', tag: 'Classroom' },
@@ -85,10 +83,8 @@ export const VIDEOS = [
 // Full gallery: videos + campus + activities combined (videos shown first)
 export const GALLERY = [
   ...VIDEOS,
-  { src: ASSETS.campus[0], caption: 'Our Campus — front view', tag: 'Campus' },
+  { src: ASSETS.campus[0], caption: 'Our Campus — Kaizen Academy, Thrithala', tag: 'Campus' },
   ...ASSETS.activities,
-  { src: ASSETS.campus[1], caption: 'Side view of the academy', tag: 'Campus' },
-  { src: ASSETS.campus[2], caption: 'Corner view of the campus', tag: 'Campus' },
 ];
 
 export const GALLERY_TAGS = ['All', 'Videos', 'Campus', 'Classroom', 'Achievement', 'Events', 'Activities'];

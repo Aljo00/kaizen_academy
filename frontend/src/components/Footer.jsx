@@ -4,7 +4,7 @@ import { SITE, ASSETS, COURSE_CATEGORIES } from '../data/site';
 
 export default function Footer() {
   return (
-    <footer className="relative mt-32 bg-[#0B1220] text-slate-300" data-testid="site-footer">
+    <footer className="relative bg-[#0B1220] text-slate-300" data-testid="site-footer">
       <div className="absolute inset-x-0 -top-px h-px ka-gradient opacity-60" />
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 grid grid-cols-1 md:grid-cols-12 gap-10">
         <div className="md:col-span-4">

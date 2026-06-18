@@ -41,17 +41,21 @@ export default function Gallery() {
         <div className="max-w-7xl mx-auto px-5 md:px-12">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 auto-rows-[140px] sm:auto-rows-[180px] md:auto-rows-[240px] gap-3 md:gap-4">
             {items.map((it, i) => {
-              // varied tile sizing for an editorial feel
-              const span = [
-                'row-span-2',
-                '',
-                'col-span-2 row-span-2',
-                '',
-                'row-span-2',
-                '',
-                'col-span-2',
-                '',
-              ][i % 8] || '';
+              // Videos always render as a wide landscape tile (2 cols, 1 row).
+              // Lightbox opens them in their original portrait orientation.
+              const isVideo = it.type === 'video';
+              const span = isVideo
+                ? 'col-span-2'
+                : ([
+                    'row-span-2',
+                    '',
+                    'col-span-2 row-span-2',
+                    '',
+                    'row-span-2',
+                    '',
+                    'col-span-2',
+                    '',
+                  ][i % 8] || '');
               return (
                 <motion.button
                   key={it.src}

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { Quote, Users, UserCheck, Target, Building2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Quote, Users, UserCheck, Target, Building2, ArrowRight } from 'lucide-react';
 import { ASSETS, WHY_FEATURES, STATS } from '../data/site';
 import AnimatedCounter from '../components/AnimatedCounter';
 
@@ -45,7 +46,7 @@ export default function About() {
       {/* FOUNDER */}
       <section className="bg-white py-16 md:py-32">
         <div className="max-w-7xl mx-auto px-5 md:px-12 grid lg:grid-cols-12 gap-8 md:gap-12 items-center">
-          <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="lg:col-span-5">
+          <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="lg:col-span-5 mx-auto w-full max-w-sm md:max-w-md lg:max-w-none">
             <div className="relative">
               <div className="absolute -inset-3 ka-gradient rounded-3xl opacity-25 blur-2xl" />
               <div className="relative aspect-[4/5] rounded-3xl overflow-hidden bg-slate-100">
@@ -119,11 +120,16 @@ export default function About() {
             <h2 className="font-display mt-3 md:mt-4 text-3xl sm:text-4xl md:text-5xl font-light tracking-tight text-slate-900">Where great learning happens.</h2>
           </div>
           <div className="mt-10 md:mt-12 columns-2 md:columns-2 lg:columns-3 gap-3 md:gap-5">
-            {[...ASSETS.campus, ...ASSETS.activities.map(a => a.src)].map((src, i) => (
+            {[...ASSETS.campus, ...ASSETS.activities.map(a => a.src)].slice(0, 5).map((src, i) => (
               <div key={src} className="mb-3 md:mb-5 break-inside-avoid group rounded-xl md:rounded-2xl overflow-hidden bg-slate-100 border border-slate-100" data-testid={`about-campus-${i}`}>
                 <img src={src} alt="campus" loading="lazy" className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" />
               </div>
             ))}
+          </div>
+          <div className="mt-8 md:mt-12 flex justify-center">
+            <Link to="/gallery" className="group inline-flex items-center gap-2 px-6 md:px-7 py-3 md:py-3.5 rounded-full bg-slate-900 text-white text-sm font-medium hover:bg-slate-800 hover:-translate-y-0.5 transition-all shadow-[0_10px_30px_rgba(15,23,42,0.18)]" data-testid="about-view-all-btn">
+              View All Photos <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
         </div>
       </section>

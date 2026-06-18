@@ -51,6 +51,15 @@ Build a world-class, premium, modern educational institution website for Kaizen 
 - ✅ Added "Our Story" video section to About page (prominent player with controls)
 - ✅ Mobile responsiveness overhaul: hero font sizes scale from text-4xl, sections use py-16 on mobile, px-5 padding, stats/grids 2-col on phone, smaller h2/h3, lighter tile heights in gallery (140px on mobile)
 
+## Updates (18 Feb 2026 — Round 3)
+- ✅ Fixed huge gap between content and footer (removed `mt-32` from Footer)
+- ✅ Removed double `pt-32` padding from Contact + Courses page main+section
+- ✅ About page Campus section now limited to 5 photos with a "View All Photos" CTA → `/gallery`
+- ✅ Founder image: constrained to `max-w-sm md:max-w-md` on mobile/tablet, full size on desktop only (Home + About)
+- ✅ Added institute logo as favicon + Apple touch icon (`/public/index.html`)
+- ✅ Replaced all 3 campus stock photos with the single red building photo (`rvqpr0rg_image.png`)
+- ✅ Gallery video tiles forced to landscape orientation (`col-span-2`); lightbox preserves original portrait via `object-contain`
+
 ## Backlog (P0 → P2)
 - P1: Admin dashboard to view enquiries (currently only GET endpoint, no UI)
 - P1: Live Instagram/YouTube feed embed (currently links only)

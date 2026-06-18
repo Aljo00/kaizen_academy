@@ -43,9 +43,9 @@ export default function Contact() {
   };
 
   return (
-    <main data-testid="contact-page" className="pt-32">
+    <main data-testid="contact-page">
       <Toaster richColors position="top-center" />
-      <section className="max-w-7xl mx-auto px-5 md:px-12 pb-10 md:pb-12 pt-28 md:pt-32">
+      <section className="max-w-7xl mx-auto px-5 md:px-12 pb-10 md:pb-12 pt-28 md:pt-40">
         <div className="text-[11px] tracking-[0.3em] uppercase text-slate-500 font-semibold">Get In Touch</div>
         <h1 className="font-display mt-4 md:mt-5 text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight font-light text-slate-900 max-w-4xl text-balance leading-[1.05]">
           Let's start your <span className="ka-gradient-text italic font-medium">Kaizen</span> journey.

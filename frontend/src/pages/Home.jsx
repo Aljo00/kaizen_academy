@@ -212,7 +212,7 @@ export default function Home() {
       {/* FOUNDER */}
       <Section className="bg-white">
         <div className="max-w-7xl mx-auto px-5 md:px-12 grid lg:grid-cols-12 gap-10 md:gap-12 items-center">
-          <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="lg:col-span-5">
+          <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="lg:col-span-5 mx-auto w-full max-w-sm md:max-w-md lg:max-w-none">
             <div className="relative">
               <div className="absolute -inset-3 ka-gradient rounded-3xl opacity-25 blur-2xl" />
               <div className="relative aspect-[4/5] rounded-3xl overflow-hidden bg-slate-100">

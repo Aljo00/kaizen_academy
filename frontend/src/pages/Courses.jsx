@@ -11,8 +11,8 @@ export default function Courses() {
   const visible = filter === 'all' ? COURSE_CATEGORIES : COURSE_CATEGORIES.filter(c => c.id === filter);
 
   return (
-    <main data-testid="courses-page" className="pt-32">
-      <section className="relative max-w-7xl mx-auto px-5 md:px-12 pb-10 md:pb-12 pt-28 md:pt-32">
+    <main data-testid="courses-page">
+      <section className="relative max-w-7xl mx-auto px-5 md:px-12 pb-10 md:pb-12 pt-28 md:pt-40">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(60%_50%_at_50%_0%,rgba(124,58,237,0.08),transparent_70%)]" />
         <div className="text-[11px] tracking-[0.3em] uppercase text-slate-500 font-semibold">Our Programs</div>
         <h1 className="font-display mt-4 md:mt-5 text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight font-light text-slate-900 max-w-4xl text-balance leading-[1.05]">
