@@ -1,12 +1,16 @@
-import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Quote, Users, UserCheck, Target, Building2, ArrowRight } from 'lucide-react';
+import { Quote, Users, UserCheck, Target, Building2, ArrowRight, Play, X } from 'lucide-react';
 import { ASSETS, WHY_FEATURES, STATS } from '../data/site';
 import AnimatedCounter from '../components/AnimatedCounter';
 
 const ICONS = { Users, UserCheck, Target, Building2 };
 
+const STORY_VIDEO = 'https://customer-assets.emergentagent.com/job_kaizen-premium/artifacts/2iedaedl_WhatsApp%20Video%202026-06-17%20at%209.39.20%20PM.mp4';
+
 export default function About() {
+  const [open, setOpen] = useState(false);
   return (
     <main data-testid="about-page" className="pt-32">
       {/* HERO */}
@@ -30,18 +34,52 @@ export default function About() {
             <h2 className="font-display mt-4 text-3xl sm:text-4xl md:text-5xl font-light tracking-tight">The story of <em className="ka-gradient-text not-italic">Kaizen Academy</em>.</h2>
             <p className="mt-4 text-sm md:text-base text-slate-300 leading-relaxed">A glimpse into our journey — the classrooms, the students, the spirit that makes Kaizen what it is today.</p>
           </div>
-          <div className="mt-10 md:mt-14 relative rounded-2xl md:rounded-3xl overflow-hidden shadow-[0_30px_80px_-30px_rgba(0,0,0,0.6)] ring-1 ring-white/10 bg-black">
+          <div className="mt-10 md:mt-14 relative rounded-2xl md:rounded-3xl overflow-hidden shadow-[0_30px_80px_-30px_rgba(0,0,0,0.6)] ring-1 ring-white/10 bg-black aspect-video group cursor-pointer" onClick={() => setOpen(true)} data-testid="about-story-thumb">
             <video
-              src="https://customer-assets.emergentagent.com/job_kaizen-premium/artifacts/2iedaedl_WhatsApp%20Video%202026-06-17%20at%209.39.20%20PM.mp4"
-              controls
+              src={STORY_VIDEO}
+              muted
+              loop
               playsInline
+              autoPlay
               preload="metadata"
-              className="w-full h-auto block"
-              data-testid="about-story-player"
+              className="absolute inset-0 w-full h-full object-cover"
+              data-testid="about-story-preview"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/30 group-hover:from-black/30 transition-colors" />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="h-16 w-16 md:h-20 md:w-20 rounded-full bg-white/95 text-slate-900 flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+                <Play className="h-7 w-7 md:h-8 md:w-8 fill-current ml-1" />
+              </div>
+            </div>
+            <div className="absolute bottom-4 left-4 right-4 text-white text-xs md:text-sm font-medium tracking-wide">Tap to watch full story</div>
           </div>
         </div>
       </section>
+
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[80] bg-black/95 backdrop-blur-sm flex items-center justify-center p-4"
+            onClick={() => setOpen(false)}
+            data-testid="about-story-lightbox"
+          >
+            <button onClick={() => setOpen(false)} className="absolute top-5 right-5 h-10 w-10 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-white/20 transition-colors" data-testid="story-close-btn">
+              <X className="h-5 w-5" />
+            </button>
+            <motion.video
+              initial={{ scale: 0.95, opacity: 0 }} animate={{ scale: 1, opacity: 1 }}
+              src={STORY_VIDEO}
+              controls
+              autoPlay
+              playsInline
+              className="max-h-[90vh] max-w-[95vw] object-contain rounded-xl shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+              data-testid="story-lightbox-player"
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* FOUNDER */}
       <section className="bg-white py-16 md:py-32">

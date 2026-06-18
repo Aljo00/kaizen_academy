@@ -60,6 +60,11 @@ Build a world-class, premium, modern educational institution website for Kaizen 
 - ✅ Replaced all 3 campus stock photos with the single red building photo (`rvqpr0rg_image.png`)
 - ✅ Gallery video tiles forced to landscape orientation (`col-span-2`); lightbox preserves original portrait via `object-contain`
 
+## Updates (18 Feb 2026 — Round 4)
+- ✅ About page story video → now landscape thumbnail (`aspect-video`, muted autoplay loop with play overlay); clicking opens fullscreen lightbox showing original portrait with controls + sound
+- ✅ Fixed gallery Campus filter — was using wrong URL (`rvqpr0rg` was a screenshot of the website, not the institute). Updated to correct URL (`cul5e93w_...`) which shows the actual red institute building with plaque
+- ✅ Removed wrongly-tagged "newly painted campus" entry and the off-brand "stylish students by SUV" Activities photo
+
 ## Backlog (P0 → P2)
 - P1: Admin dashboard to view enquiries (currently only GET endpoint, no UI)
 - P1: Live Instagram/YouTube feed embed (currently links only)

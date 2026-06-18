@@ -26,7 +26,7 @@ export const ASSETS = {
   logo: `${A}/sa8sjh89_image.png`,
   founder: `${A}/crf7e7v1_image.png`,
   campus: [
-    `${A}/rvqpr0rg_image.png`,
+    `${A}/cul5e93w_Gemini_Generated_Image_6662qi6662qi6662%20Copy.png`,
   ],
   activities: [
     { src: `${A}/hrxc4kpi_Photo%201.jpeg`, caption: 'Classroom in session', tag: 'Classroom' },
@@ -39,10 +39,8 @@ export const ASSETS = {
     { src: `${A}/wy4l3nua_Photo%207.jpeg`, caption: 'Sports team with trophies', tag: 'Achievement' },
     { src: `${A}/l1cpa1tx_Photo%208.jpeg`, caption: 'Campus event gathering', tag: 'Events' },
     { src: `${A}/epzhik42_Photo%209.jpeg`, caption: 'Cultural festival celebration', tag: 'Events' },
-    { src: `${A}/qllzid2s_W%20Image%202026-06-17%20at%209.39.31%20PM.jpeg`, caption: 'Stylish students by campus ride', tag: 'Activities' },
     { src: `${A}/vc19j8va_WhatsApp%20Image%202.jpeg`, caption: 'Student community gathering', tag: 'Events' },
     { src: `${A}/r4f0oxyk_WhatsApp%20Imag%202026-06-17%20at%209.39.21%20PM.jpeg`, caption: 'Football tournament champions', tag: 'Achievement' },
-    { src: `${A}/t9ytlemi_WhatsAp%20Image%202026-06-17%20at%209.39.30%20PM.jpeg`, caption: 'Our newly painted campus', tag: 'Campus' },
     { src: `${A}/np5g50q8_WhatsAp%20Image%202026-06-17%20at%209.39.21%20PM.jpeg`, caption: 'Educational field visit', tag: 'Events' },
     { src: `${A}/i3xcy84l_WhatsApp%20Image%202026-06-1.jpeg`, caption: 'Onam celebration in traditional saree', tag: 'Events' },
     { src: `${A}/5pagia8u_WhatsApp%20Image%202026-06-.jpeg`, caption: 'Live music night on campus', tag: 'Events' },
