@@ -110,7 +110,7 @@ export default function Contact() {
           <div className="lg:col-span-7">
             <motion.form
               id="enquiry"
-              onSubmit={submit}
+              action="https://api.web3forms.com/submit" method="POST"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -131,6 +131,7 @@ export default function Contact() {
               )}
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <input type="hidden" name="access_key" value="11f147f9-8c75-465b-8841-6e63007d1782"></input>
                 <Field label="Student Name *" name="student_name" value={form.student_name} onChange={onChange} placeholder="Full name" testId="field-student" />
                 <Field label="Parent Name *" name="parent_name" value={form.parent_name} onChange={onChange} placeholder="Full name" testId="field-parent" />
                 <Field label="Phone Number *" name="phone" value={form.phone} onChange={onChange} placeholder="10-digit mobile" testId="field-phone" />
