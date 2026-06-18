@@ -45,9 +45,9 @@ export default function Contact() {
   return (
     <main data-testid="contact-page" className="pt-32">
       <Toaster richColors position="top-center" />
-      <section className="max-w-7xl mx-auto px-6 md:px-12 pb-12">
+      <section className="max-w-7xl mx-auto px-5 md:px-12 pb-10 md:pb-12 pt-28 md:pt-32">
         <div className="text-[11px] tracking-[0.3em] uppercase text-slate-500 font-semibold">Get In Touch</div>
-        <h1 className="font-display mt-5 text-5xl sm:text-6xl lg:text-7xl tracking-tight font-light text-slate-900 max-w-4xl text-balance">
+        <h1 className="font-display mt-4 md:mt-5 text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight font-light text-slate-900 max-w-4xl text-balance leading-[1.05]">
           Let's start your <span className="ka-gradient-text italic font-medium">Kaizen</span> journey.
         </h1>
         <p className="mt-6 max-w-2xl text-lg text-slate-600 leading-relaxed">
@@ -56,7 +56,7 @@ export default function Contact() {
       </section>
 
       <section className="py-12 md:py-20">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 grid lg:grid-cols-12 gap-10">
+        <div className="max-w-7xl mx-auto px-5 md:px-12 grid lg:grid-cols-12 gap-8 md:gap-10">
           {/* INFO */}
           <div className="lg:col-span-5 space-y-5">
             <div className="rounded-3xl bg-white border border-slate-100 p-7" data-testid="contact-info">

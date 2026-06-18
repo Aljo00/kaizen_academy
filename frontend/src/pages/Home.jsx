@@ -14,7 +14,7 @@ const fadeUp = {
 };
 
 function Section({ children, className = '', id }) {
-  return <section id={id} className={`relative py-24 md:py-32 ${className}`}>{children}</section>;
+  return <section id={id} className={`relative py-16 md:py-32 ${className}`}>{children}</section>;
 }
 
 function Eyebrow({ children }) {
@@ -31,50 +31,50 @@ export default function Home() {
   return (
     <main data-testid="home-page">
       {/* HERO */}
-      <section className="relative overflow-hidden pt-32 md:pt-40 pb-24 md:pb-32" data-testid="hero-section">
+      <section className="relative overflow-hidden pt-28 md:pt-40 pb-16 md:pb-32" data-testid="hero-section">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[radial-gradient(80%_60%_at_50%_0%,rgba(37,99,235,0.10),transparent_60%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(50%_40%_at_85%_30%,rgba(244,63,94,0.10),transparent_60%)]" />
           <ParticleNetwork />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 md:px-12">
+        <div className="relative max-w-7xl mx-auto px-5 md:px-12">
           <motion.div variants={fadeUp} initial="hidden" animate="show" className="flex flex-col items-center text-center">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white shadow-sm border border-slate-200 text-xs font-medium text-slate-700" data-testid="hero-badge">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white shadow-sm border border-slate-200 text-[11px] md:text-xs font-medium text-slate-700" data-testid="hero-badge">
               <span className="h-1.5 w-1.5 rounded-full bg-rose-500 animate-pulse" /> Admissions Open · 2025 Batch
             </span>
-            <h1 className="font-display mt-7 text-5xl sm:text-6xl lg:text-7xl tracking-tight font-light text-slate-900 text-balance max-w-4xl">
+            <h1 className="font-display mt-5 md:mt-7 text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight font-light text-slate-900 text-balance max-w-4xl leading-[1.05]">
               The Builders of <span className="ka-gradient-text italic font-medium">Next Generation</span>
             </h1>
-            <p className="mt-6 max-w-2xl text-lg text-slate-600 leading-relaxed">
+            <p className="mt-4 md:mt-6 max-w-2xl text-base md:text-lg text-slate-600 leading-relaxed px-2">
               Empowering students with academic excellence, career guidance and personal mentorship — at Kaizen Academy, Thrithala, learning is crafted, not delivered.
             </p>
-            <div className="mt-9 flex flex-col sm:flex-row items-center gap-3">
-              <Link to="/courses" className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-slate-900 text-white text-sm font-medium hover:bg-slate-800 hover:-translate-y-0.5 transition-all shadow-[0_10px_30px_rgba(15,23,42,0.18)]" data-testid="hero-explore-btn">
+            <div className="mt-7 md:mt-9 flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
+              <Link to="/courses" className="group w-full sm:w-auto inline-flex justify-center items-center gap-2 px-6 md:px-7 py-3 md:py-3.5 rounded-full bg-slate-900 text-white text-sm font-medium hover:bg-slate-800 hover:-translate-y-0.5 transition-all shadow-[0_10px_30px_rgba(15,23,42,0.18)]" data-testid="hero-explore-btn">
                 Explore Courses <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link to="/contact#enquiry" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full ka-gradient text-white text-sm font-medium hover:-translate-y-0.5 transition-all shadow-[0_10px_30px_rgba(124,58,237,0.35)]" data-testid="hero-apply-btn">
+              <Link to="/contact#enquiry" className="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-6 md:px-7 py-3 md:py-3.5 rounded-full ka-gradient text-white text-sm font-medium hover:-translate-y-0.5 transition-all shadow-[0_10px_30px_rgba(124,58,237,0.35)]" data-testid="hero-apply-btn">
                 <Sparkles className="h-4 w-4" /> Apply For Admission
               </Link>
             </div>
 
             {/* hero pills */}
-            <div className="mt-12 flex flex-wrap items-center justify-center gap-2">
+            <div className="mt-9 md:mt-12 flex flex-wrap items-center justify-center gap-2">
               {['Expert Faculty', 'Personalized Coaching', 'Career-Focused Learning', 'Proven Excellence'].map((t) => (
-                <span key={t} className="px-3.5 py-1.5 text-xs rounded-full bg-white/70 backdrop-blur border border-slate-200 text-slate-700">{t}</span>
+                <span key={t} className="px-3 py-1.5 text-[11px] md:text-xs rounded-full bg-white/70 backdrop-blur border border-slate-200 text-slate-700">{t}</span>
               ))}
             </div>
           </motion.div>
 
           {/* Stats card */}
-          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="relative mt-20 md:mt-24 mx-auto max-w-5xl">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-slate-200 rounded-3xl overflow-hidden shadow-[0_30px_80px_-30px_rgba(15,23,42,0.25)]">
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="relative mt-14 md:mt-24 mx-auto max-w-5xl">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-slate-200 rounded-2xl md:rounded-3xl overflow-hidden shadow-[0_30px_80px_-30px_rgba(15,23,42,0.25)]">
               {STATS.map((s, i) => (
-                <div key={i} className="bg-white p-6 md:p-8 text-center" data-testid={`stat-${i}`}>
-                  <div className="font-display text-4xl md:text-5xl font-light text-slate-900">
+                <div key={i} className="bg-white p-4 md:p-8 text-center" data-testid={`stat-${i}`}>
+                  <div className="font-display text-3xl md:text-5xl font-light text-slate-900">
                     <AnimatedCounter value={s.value} suffix={s.suffix} />
                   </div>
-                  <div className="mt-2 text-xs tracking-[0.2em] uppercase text-slate-500">{s.label}</div>
+                  <div className="mt-1.5 md:mt-2 text-[10px] md:text-xs tracking-[0.2em] uppercase text-slate-500">{s.label}</div>
                 </div>
               ))}
             </div>
@@ -84,11 +84,11 @@ export default function Home() {
 
       {/* ABOUT TEASER */}
       <Section className="bg-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 grid lg:grid-cols-12 gap-12 items-start">
+        <div className="max-w-7xl mx-auto px-5 md:px-12 grid lg:grid-cols-12 gap-10 md:gap-12 items-start">
           <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeUp} className="lg:col-span-5">
             <Eyebrow>Why Kaizen Academy</Eyebrow>
-            <h2 className="font-display mt-5 text-4xl sm:text-5xl font-light text-slate-900 tracking-tight text-balance">A premium learning experience designed in Thrithala.</h2>
-            <p className="mt-6 text-slate-600 leading-relaxed">
+            <h2 className="font-display mt-4 md:mt-5 text-3xl sm:text-4xl md:text-5xl font-light text-slate-900 tracking-tight text-balance">A premium learning experience designed in Thrithala.</h2>
+            <p className="mt-5 md:mt-6 text-sm md:text-base text-slate-600 leading-relaxed">
               Kaizen Academy nurtures students through personalised coaching, innovative teaching and career-oriented education. We don't run another tuition centre — we craft learners who think, lead and excel.
             </p>
             <Link to="/about" className="mt-7 inline-flex items-center gap-2 text-sm font-medium text-slate-900 group" data-testid="about-teaser-link">
@@ -129,7 +129,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="mt-10 md:mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
             {COURSE_CATEGORIES.map((c, i) => {
               const Icon = ICONS[c.icon];
               return (
@@ -160,13 +160,13 @@ export default function Home() {
 
       {/* CAMPUS */}
       <Section className="bg-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <div className="max-w-7xl mx-auto px-5 md:px-12">
           <div className="text-center max-w-2xl mx-auto">
             <Eyebrow>Campus</Eyebrow>
-            <h2 className="font-display mt-4 text-4xl sm:text-5xl font-light tracking-tight text-slate-900">Learn in a positive environment.</h2>
-            <p className="mt-4 text-slate-600">A calm, well-lit, distraction-free campus engineered for deep focus.</p>
+            <h2 className="font-display mt-3 md:mt-4 text-3xl sm:text-4xl md:text-5xl font-light tracking-tight text-slate-900">Learn in a positive environment.</h2>
+            <p className="mt-3 md:mt-4 text-sm md:text-base text-slate-600">A calm, well-lit, distraction-free campus engineered for deep focus.</p>
           </div>
-          <div className="mt-14 columns-1 md:columns-2 lg:columns-3 gap-5 [column-fill:_balance]">
+          <div className="mt-10 md:mt-14 columns-2 md:columns-2 lg:columns-3 gap-3 md:gap-5 [column-fill:_balance]">
             {[...ASSETS.campus, ...ASSETS.activities.map(a => a.src)].slice(0, 5).map((src, i) => (
               <motion.div key={src} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: (i % 3) * 0.08 }}
                 className="mb-5 break-inside-avoid relative group overflow-hidden rounded-2xl border border-slate-100 bg-slate-100"
@@ -187,20 +187,20 @@ export default function Home() {
       {/* WHY CHOOSE US */}
       <Section className="bg-[#0B1220] text-white relative overflow-hidden" id="why">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full opacity-20 blur-3xl ka-gradient" />
-        <div className="relative max-w-7xl mx-auto px-6 md:px-12">
+        <div className="relative max-w-7xl mx-auto px-5 md:px-12">
           <div className="max-w-2xl">
-            <div className="text-[11px] tracking-[0.3em] uppercase text-slate-400 font-semibold">Why Students Choose Us</div>
-            <h2 className="font-display mt-5 text-4xl sm:text-5xl font-light tracking-tight">A coaching ecosystem built around <em className="ka-gradient-text not-italic">you</em>.</h2>
+            <div className="text-[10px] md:text-[11px] tracking-[0.3em] uppercase text-slate-400 font-semibold">Why Students Choose Us</div>
+            <h2 className="font-display mt-4 md:mt-5 text-3xl sm:text-4xl md:text-5xl font-light tracking-tight">A coaching ecosystem built around <em className="ka-gradient-text not-italic">you</em>.</h2>
           </div>
-          <div className="mt-14 grid grid-cols-2 md:grid-cols-3 gap-px bg-white/10 rounded-3xl overflow-hidden">
+          <div className="mt-10 md:mt-14 grid grid-cols-2 md:grid-cols-3 gap-px bg-white/10 rounded-2xl md:rounded-3xl overflow-hidden">
             {WHY_CHOOSE.map((f, i) => {
               const Icon = ICONS[f.icon];
               return (
-                <div key={f.title} className="bg-[#0B1220] p-7 md:p-9 hover:bg-white/[0.03] transition-colors group" data-testid={`whychoose-${i}`}>
-                  <div className="text-xs text-slate-500 font-mono">0{i + 1}</div>
-                  <div className="mt-6 flex items-center gap-3">
-                    <Icon className="h-5 w-5 text-rose-400" />
-                    <div className="font-display text-xl">{f.title}</div>
+                <div key={f.title} className="bg-[#0B1220] p-5 md:p-9 hover:bg-white/[0.03] transition-colors group" data-testid={`whychoose-${i}`}>
+                  <div className="text-[10px] md:text-xs text-slate-500 font-mono">0{i + 1}</div>
+                  <div className="mt-4 md:mt-6 flex items-center gap-2.5 md:gap-3">
+                    <Icon className="h-4 w-4 md:h-5 md:w-5 text-rose-400" />
+                    <div className="font-display text-base md:text-xl">{f.title}</div>
                   </div>
                 </div>
               );
@@ -211,7 +211,7 @@ export default function Home() {
 
       {/* FOUNDER */}
       <Section className="bg-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 grid lg:grid-cols-12 gap-12 items-center">
+        <div className="max-w-7xl mx-auto px-5 md:px-12 grid lg:grid-cols-12 gap-10 md:gap-12 items-center">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="lg:col-span-5">
             <div className="relative">
               <div className="absolute -inset-3 ka-gradient rounded-3xl opacity-25 blur-2xl" />
@@ -223,7 +223,7 @@ export default function Home() {
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="lg:col-span-7">
             <Eyebrow>Message From The Founder</Eyebrow>
             <Quote className="mt-6 h-8 w-8 text-rose-400" />
-            <p className="mt-4 font-display text-3xl md:text-4xl text-slate-900 leading-snug text-balance font-light">
+            <p className="mt-3 md:mt-4 font-display text-2xl sm:text-3xl md:text-4xl text-slate-900 leading-snug text-balance font-light">
               "At Kaizen Academy, our mission is to shape confident learners and future leaders through quality education and continuous improvement."
             </p>
             <div className="mt-8 flex items-center gap-4">
@@ -239,14 +239,14 @@ export default function Home() {
 
       {/* TESTIMONIALS */}
       <Section className="bg-[#FAFAFA]">
-        <div className="max-w-5xl mx-auto px-6 md:px-12 text-center">
+        <div className="max-w-5xl mx-auto px-5 md:px-12 text-center">
           <Eyebrow>Voices Of Our Students</Eyebrow>
-          <h2 className="font-display mt-4 text-4xl sm:text-5xl font-light tracking-tight text-slate-900">Stories that keep us going.</h2>
+          <h2 className="font-display mt-3 md:mt-4 text-3xl sm:text-4xl md:text-5xl font-light tracking-tight text-slate-900">Stories that keep us going.</h2>
         </div>
-        <div className="mt-14 max-w-3xl mx-auto px-6">
-          <motion.div key={tIndex} initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="glass rounded-3xl p-8 md:p-10 shadow-[0_30px_80px_-40px_rgba(15,23,42,0.3)]" data-testid="testimonial-card">
+        <div className="mt-10 md:mt-14 max-w-3xl mx-auto px-5 md:px-6">
+          <motion.div key={tIndex} initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="glass rounded-2xl md:rounded-3xl p-6 md:p-10 shadow-[0_30px_80px_-40px_rgba(15,23,42,0.3)]" data-testid="testimonial-card">
             <div className="flex items-center gap-1 text-amber-400">{Array(5).fill(0).map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}</div>
-            <p className="mt-5 font-display text-2xl md:text-3xl font-light text-slate-900 leading-snug">"{TESTIMONIALS[tIndex].text}"</p>
+            <p className="mt-4 md:mt-5 font-display text-xl sm:text-2xl md:text-3xl font-light text-slate-900 leading-snug">"{TESTIMONIALS[tIndex].text}"</p>
             <div className="mt-7 flex items-center gap-4">
               <div className="h-12 w-12 rounded-full ka-gradient text-white flex items-center justify-center font-display text-lg font-medium shadow-md">
                 {TESTIMONIALS[tIndex].name.split(' ').map(n => n[0]).join('').slice(0, 2)}
@@ -267,13 +267,13 @@ export default function Home() {
 
       {/* SOCIAL PROOF */}
       <Section className="bg-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <div className="max-w-7xl mx-auto px-5 md:px-12">
           <div className="max-w-2xl">
             <Eyebrow>Stay Connected</Eyebrow>
-            <h2 className="font-display mt-4 text-4xl sm:text-5xl font-light tracking-tight text-slate-900">Connect with Kaizen Academy.</h2>
-            <p className="mt-4 text-slate-600">Latest classes, achievements, success stories and educational content — straight from our campus.</p>
+            <h2 className="font-display mt-3 md:mt-4 text-3xl sm:text-4xl md:text-5xl font-light tracking-tight text-slate-900">Connect with Kaizen Academy.</h2>
+            <p className="mt-3 md:mt-4 text-sm md:text-base text-slate-600">Latest classes, achievements, success stories and educational content — straight from our campus.</p>
           </div>
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="mt-10 md:mt-12 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
             {[
               { id: 'instagram', name: 'Instagram', href: SITE.social.instagram, icon: <Instagram className="h-5 w-5 text-white" />, bg: 'bg-gradient-to-tr from-rose-500 via-fuchsia-500 to-amber-400', items: ['Latest Updates', 'Educational Reels', 'Student Activities'], cta: 'Follow' },
               { id: 'youtube', name: 'YouTube', href: SITE.social.youtube, icon: <Youtube className="h-5 w-5 text-white" />, bg: 'bg-red-600', items: ['Learning Videos', 'Career Guidance', 'Exam Prep Tips'], cta: 'Subscribe' },
@@ -300,15 +300,15 @@ export default function Home() {
         <div className="absolute inset-0 grain" />
         <div className="absolute -top-20 -left-10 h-80 w-80 rounded-full bg-white/20 blur-3xl animate-float" />
         <div className="absolute -bottom-20 right-0 h-96 w-96 rounded-full bg-rose-300/30 blur-3xl animate-float" style={{ animationDelay: '2s' }} />
-        <div className="relative max-w-5xl mx-auto px-6 md:px-12 py-24 md:py-32 text-center text-white">
-          <div className="text-[11px] tracking-[0.3em] uppercase font-semibold opacity-90">Now Enrolling</div>
-          <h2 className="font-display mt-5 text-5xl sm:text-6xl font-light tracking-tight">Admissions Open Now</h2>
-          <p className="mt-5 max-w-2xl mx-auto text-white/85 leading-relaxed">Join Kaizen Academy and build a strong foundation for your future. Limited seats. Big outcomes.</p>
-          <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3">
-            <Link to="/contact#enquiry" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white text-slate-900 text-sm font-medium hover:-translate-y-0.5 transition-transform shadow-xl" data-testid="cta-apply-btn">
+        <div className="relative max-w-5xl mx-auto px-5 md:px-12 py-16 md:py-32 text-center text-white">
+          <div className="text-[10px] md:text-[11px] tracking-[0.3em] uppercase font-semibold opacity-90">Now Enrolling</div>
+          <h2 className="font-display mt-4 md:mt-5 text-4xl sm:text-5xl md:text-6xl font-light tracking-tight">Admissions Open Now</h2>
+          <p className="mt-4 md:mt-5 max-w-2xl mx-auto text-sm md:text-base text-white/85 leading-relaxed">Join Kaizen Academy and build a strong foundation for your future. Limited seats. Big outcomes.</p>
+          <div className="mt-7 md:mt-9 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <Link to="/contact#enquiry" className="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-6 md:px-7 py-3 md:py-3.5 rounded-full bg-white text-slate-900 text-sm font-medium hover:-translate-y-0.5 transition-transform shadow-xl" data-testid="cta-apply-btn">
               Apply Now <ArrowRight className="h-4 w-4" />
             </Link>
-            <a href={`tel:${SITE.phones[0]}`} className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white/10 border border-white/40 text-white text-sm font-medium hover:bg-white/15 transition-colors backdrop-blur" data-testid="cta-call-btn">
+            <a href={`tel:${SITE.phones[0]}`} className="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-6 md:px-7 py-3 md:py-3.5 rounded-full bg-white/10 border border-white/40 text-white text-sm font-medium hover:bg-white/15 transition-colors backdrop-blur" data-testid="cta-call-btn">
               Call Us
             </a>
           </div>

@@ -48,6 +48,8 @@ Build a world-class, premium, modern educational institution website for Kaizen 
 - ✅ Homepage "Courses Offered" counter updated from `15+` to `9`
 - ✅ Homepage Campus section limited to first 5 photos + "View All Photos" CTA → `/gallery`
 - ✅ Added 4 promo videos to Gallery (muted autoplay tiles, fullscreen lightbox with controls)
+- ✅ Added "Our Story" video section to About page (prominent player with controls)
+- ✅ Mobile responsiveness overhaul: hero font sizes scale from text-4xl, sections use py-16 on mobile, px-5 padding, stats/grids 2-col on phone, smaller h2/h3, lighter tile heights in gallery (140px on mobile)
 
 ## Backlog (P0 → P2)
 - P1: Admin dashboard to view enquiries (currently only GET endpoint, no UI)

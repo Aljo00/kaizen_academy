@@ -12,10 +12,10 @@ export default function Courses() {
 
   return (
     <main data-testid="courses-page" className="pt-32">
-      <section className="relative max-w-7xl mx-auto px-6 md:px-12 pb-12">
+      <section className="relative max-w-7xl mx-auto px-5 md:px-12 pb-10 md:pb-12 pt-28 md:pt-32">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(60%_50%_at_50%_0%,rgba(124,58,237,0.08),transparent_70%)]" />
         <div className="text-[11px] tracking-[0.3em] uppercase text-slate-500 font-semibold">Our Programs</div>
-        <h1 className="font-display mt-5 text-5xl sm:text-6xl lg:text-7xl tracking-tight font-light text-slate-900 max-w-4xl text-balance">
+        <h1 className="font-display mt-4 md:mt-5 text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight font-light text-slate-900 max-w-4xl text-balance leading-[1.05]">
           Pick a path. We'll <span className="ka-gradient-text italic font-medium">walk it</span> with you.
         </h1>
         <p className="mt-6 max-w-2xl text-lg text-slate-600 leading-relaxed">
@@ -33,7 +33,7 @@ export default function Courses() {
       </section>
 
       <section className="py-12 md:py-20">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="max-w-7xl mx-auto px-5 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-6">
           {visible.map((c, i) => {
             const Icon = ICONS[c.icon];
             return (
@@ -71,8 +71,8 @@ export default function Courses() {
       <section className="relative overflow-hidden mt-12" data-testid="courses-cta">
         <div className="absolute inset-0 ka-gradient" />
         <div className="absolute inset-0 grain" />
-        <div className="relative max-w-5xl mx-auto px-6 md:px-12 py-20 text-center text-white">
-          <h2 className="font-display text-4xl sm:text-5xl font-light tracking-tight">Not sure which program fits?</h2>
+        <div className="relative max-w-5xl mx-auto px-5 md:px-12 py-14 md:py-20 text-center text-white">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-light tracking-tight">Not sure which program fits?</h2>
           <p className="mt-3 max-w-xl mx-auto text-white/85">Talk to our mentors. We'll help you choose the right path for your goals.</p>
           <Link to="/contact#enquiry" className="mt-7 inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white text-slate-900 text-sm font-medium hover:-translate-y-0.5 transition-transform shadow-xl" data-testid="courses-cta-apply">
             Get Free Counselling <ArrowRight className="h-4 w-4" />

@@ -13,22 +13,22 @@ export default function Gallery() {
   const next = (e) => { e?.stopPropagation(); setIdx((i) => (i + 1) % items.length); };
 
   return (
-    <main data-testid="gallery-page" className="pt-32">
-      <section className="max-w-7xl mx-auto px-6 md:px-12 pb-10">
-        <div className="text-[11px] tracking-[0.3em] uppercase text-slate-500 font-semibold">Gallery</div>
-        <h1 className="font-display mt-5 text-5xl sm:text-6xl lg:text-7xl tracking-tight font-light text-slate-900 max-w-4xl text-balance">
+    <main data-testid="gallery-page" className="pt-28 md:pt-32">
+      <section className="max-w-7xl mx-auto px-5 md:px-12 pb-8 md:pb-10">
+        <div className="text-[10px] md:text-[11px] tracking-[0.3em] uppercase text-slate-500 font-semibold">Gallery</div>
+        <h1 className="font-display mt-4 md:mt-5 text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight font-light text-slate-900 max-w-4xl text-balance leading-[1.05]">
           A peek into <span className="ka-gradient-text italic font-medium">life at Kaizen</span>.
         </h1>
-        <p className="mt-6 max-w-2xl text-lg text-slate-600 leading-relaxed">
+        <p className="mt-5 md:mt-6 max-w-2xl text-base md:text-lg text-slate-600 leading-relaxed">
           Classrooms, achievements, ceremonies and quiet corners — moments from our campus in Thrithala.
         </p>
 
-        <div className="mt-10 flex flex-wrap gap-2" data-testid="gallery-filters">
+        <div className="mt-8 md:mt-10 flex flex-wrap gap-2" data-testid="gallery-filters">
           {GALLERY_TAGS.map(t => (
             <button
               key={t}
               onClick={() => setTag(t)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${tag === t ? 'bg-slate-900 text-white' : 'bg-white border border-slate-200 text-slate-700 hover:bg-slate-50'}`}
+              className={`px-3.5 md:px-4 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-medium transition-colors ${tag === t ? 'bg-slate-900 text-white' : 'bg-white border border-slate-200 text-slate-700 hover:bg-slate-50'}`}
               data-testid={`gallery-tag-${t.toLowerCase()}`}
             >
               {t}
@@ -37,9 +37,9 @@ export default function Gallery() {
         </div>
       </section>
 
-      <section className="pb-24 md:pb-32">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 auto-rows-[200px] md:auto-rows-[240px] gap-4">
+      <section className="pb-16 md:pb-32">
+        <div className="max-w-7xl mx-auto px-5 md:px-12">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 auto-rows-[140px] sm:auto-rows-[180px] md:auto-rows-[240px] gap-3 md:gap-4">
             {items.map((it, i) => {
               // varied tile sizing for an editorial feel
               const span = [
