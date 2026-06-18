@@ -74,15 +74,24 @@ export const ASSETS = {
   ],
 };
 
-// Full gallery: campus + activities combined
+// Video content
+export const VIDEOS = [
+  { src: `${A}/fmhg5y3g_Video%201.mp4`, caption: 'Life at Kaizen — Episode 1', tag: 'Videos', type: 'video' },
+  { src: `${A}/fpk7aa4p_Video%202.mp4`, caption: 'Inside the classroom', tag: 'Videos', type: 'video' },
+  { src: `${A}/0973ict8_Video%203.mp4`, caption: 'Student moments', tag: 'Videos', type: 'video' },
+  { src: `${A}/b83dmnvl_Video%204.mp4`, caption: 'Campus highlights', tag: 'Videos', type: 'video' },
+];
+
+// Full gallery: videos + campus + activities combined (videos shown first)
 export const GALLERY = [
+  ...VIDEOS,
   { src: ASSETS.campus[0], caption: 'Our Campus — front view', tag: 'Campus' },
   ...ASSETS.activities,
   { src: ASSETS.campus[1], caption: 'Side view of the academy', tag: 'Campus' },
   { src: ASSETS.campus[2], caption: 'Corner view of the campus', tag: 'Campus' },
 ];
 
-export const GALLERY_TAGS = ['All', 'Campus', 'Classroom', 'Achievement', 'Events', 'Activities'];
+export const GALLERY_TAGS = ['All', 'Videos', 'Campus', 'Classroom', 'Achievement', 'Events', 'Activities'];
 
 export const COURSE_CATEGORIES = [
   { id: 'school', label: 'School Coaching', accent: '#1D4ED8', icon: 'GraduationCap', blurb: 'Strong academic foundation for State Syllabus students from Class 8 to 12.', courses: ['State Syllabus', 'Class 8', 'Class 9', 'Class 10', 'Class 11', 'Class 12'] },

@@ -167,7 +167,7 @@ export default function Home() {
             <p className="mt-4 text-slate-600">A calm, well-lit, distraction-free campus engineered for deep focus.</p>
           </div>
           <div className="mt-14 columns-1 md:columns-2 lg:columns-3 gap-5 [column-fill:_balance]">
-            {[...ASSETS.campus, ...ASSETS.activities.map(a => a.src)].map((src, i) => (
+            {[...ASSETS.campus, ...ASSETS.activities.map(a => a.src)].slice(0, 5).map((src, i) => (
               <motion.div key={src} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: (i % 3) * 0.08 }}
                 className="mb-5 break-inside-avoid relative group overflow-hidden rounded-2xl border border-slate-100 bg-slate-100"
                 data-testid={`campus-img-${i}`}>
@@ -175,6 +175,11 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               </motion.div>
             ))}
+          </div>
+          <div className="mt-12 flex justify-center">
+            <Link to="/gallery" className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-slate-900 text-white text-sm font-medium hover:bg-slate-800 hover:-translate-y-0.5 transition-all shadow-[0_10px_30px_rgba(15,23,42,0.18)]" data-testid="campus-view-all-btn">
+              View All Photos <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
         </div>
       </Section>

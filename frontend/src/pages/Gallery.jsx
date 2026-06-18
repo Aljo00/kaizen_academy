@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, Play } from 'lucide-react';
 import { GALLERY, GALLERY_TAGS } from '../data/site';
 
 export default function Gallery() {
@@ -63,14 +63,28 @@ export default function Gallery() {
                   className={`group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-100 ${span}`}
                   data-testid={`gallery-item-${i}`}
                 >
-                  <img src={it.src} alt={it.caption} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  {it.type === 'video' ? (
+                    <>
+                      <video
+                        src={it.src}
+                        muted
+                        loop
+                        playsInline
+                        autoPlay
+                        preload="metadata"
+                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                      <div className="absolute top-3 right-3 h-9 w-9 rounded-full bg-black/40 backdrop-blur text-white flex items-center justify-center">
+                        <Play className="h-4 w-4 fill-current" />
+                      </div>
+                    </>
+                  ) : (
+                    <img src={it.src} alt={it.caption} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="absolute left-3 right-3 bottom-3 text-left text-white translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
                     <div className="text-[10px] tracking-[0.2em] uppercase opacity-80">{it.tag}</div>
                     <div className="text-sm font-medium leading-snug">{it.caption}</div>
-                  </div>
-                  <div className="absolute top-3 left-3 text-[10px] tracking-[0.2em] uppercase text-white/90 bg-black/30 backdrop-blur px-2 py-1 rounded-full opacity-0 group-hover:opacity-0">
-                    {it.tag}
                   </div>
                 </motion.button>
               );
@@ -90,13 +104,24 @@ export default function Gallery() {
             <button onClick={close} className="absolute top-5 right-5 h-11 w-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center" data-testid="lightbox-close"><X className="h-5 w-5" /></button>
             <button onClick={prev} className="absolute left-3 md:left-8 h-12 w-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center" data-testid="lightbox-prev"><ChevronLeft className="h-6 w-6" /></button>
             <button onClick={next} className="absolute right-3 md:right-8 h-12 w-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center" data-testid="lightbox-next"><ChevronRight className="h-6 w-6" /></button>
-            <motion.img
+            <motion.div
               key={items[idx].src}
               initial={{ scale: 0.95, opacity: 0 }} animate={{ scale: 1, opacity: 1 }}
-              src={items[idx].src} alt={items[idx].caption}
-              className="max-h-[85vh] max-w-[90vw] object-contain rounded-xl shadow-2xl"
+              className="max-h-[85vh] max-w-[90vw] rounded-xl shadow-2xl overflow-hidden"
               onClick={(e) => e.stopPropagation()}
-            />
+            >
+              {items[idx].type === 'video' ? (
+                <video
+                  src={items[idx].src}
+                  controls
+                  autoPlay
+                  playsInline
+                  className="max-h-[85vh] max-w-[90vw] object-contain bg-black"
+                />
+              ) : (
+                <img src={items[idx].src} alt={items[idx].caption} className="max-h-[85vh] max-w-[90vw] object-contain" />
+              )}
+            </motion.div>
             <div className="absolute bottom-5 left-0 right-0 text-center text-white/90 text-sm">{items[idx].caption}</div>
           </motion.div>
         )}

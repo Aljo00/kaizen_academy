@@ -43,9 +43,11 @@ Build a world-class, premium, modern educational institution website for Kaizen 
 ## Updates (18 Feb 2026)
 - ✅ Added `/gallery` page route
 - ✅ Removed all AI-generated stock photos; replaced with real Kaizen Academy photos
-- ✅ Added new batch of 5 photos (Photo 5–9): cultural attire, sports trophies, events
-- ✅ New gallery tag added: `Events`
+- ✅ Added 30+ batch photos (Photo 5–9 + multiple WhatsApp batches): cultural events, sports trophies, classroom sessions, campus gatherings
+- ✅ New gallery tags added: `Events`, `Activities`, `Videos`
 - ✅ Homepage "Courses Offered" counter updated from `15+` to `9`
+- ✅ Homepage Campus section limited to first 5 photos + "View All Photos" CTA → `/gallery`
+- ✅ Added 4 promo videos to Gallery (muted autoplay tiles, fullscreen lightbox with controls)
 
 ## Backlog (P0 → P2)
 - P1: Admin dashboard to view enquiries (currently only GET endpoint, no UI)
