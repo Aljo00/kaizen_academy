@@ -1,0 +1,23 @@
+{
+  "summary": "First post-MVP smoke test for Kaizen Academy site. All 5 backend API checks and all 6 frontend UI flows passed. Resend email actually delivered (email_sent=true, email_id returned), so the graceful-fallback path was not exercised but the success path works. No blockers.",
+  "tested_scope": ["frontend", "backend", "integration"],
+  "passed": [
+    "GET /api/ returns {message:'Kaizen Academy API', status:'ok'} HTTP 200",
+    "POST /api/admission-enquiry valid payload -> HTTP 200, status=success, uuid id returned, email_sent=true, email_id present, message field present, doc persisted",
+    "POST /api/admission-enquiry missing student_name -> HTTP 422 with pydantic 'Field required' error",
+    "POST /api/admission-enquiry invalid email -> HTTP 422 with email validation error",
+    "GET /api/admission-enquiries returns array containing the newly created enquiry (Test Student / testparent@example.com)",
+    "Homepage loads with hero 'The Builders of Next Generation', particle canvas visible, counters/stats visible (500+, 15+, 4, 98%)",
+    "Navbar links nav-home/about/courses/contact-link all route correctly between pages",
+    "Courses page filter buttons filter-all, filter-school, filter-commerce, filter-professional, filter-medical all clickable and functional",
+    "Contact form submission with valid data shows success-banner with 'Thank you! Your enquiry was received.' and backend received the POST",
+    "FloatingActions: fab-toggle expands and reveals fab-whatsapp, fab-call, fab-instagram (verified after hiding overlay)",
+    "Mobile (390x844): nav-mobile-toggle visible, opens nav-mobile-drawer containing nav-mobile-home-link"
+  ],
+  "failed": [],
+  "action_items": [],
+  "success_rate": {"backend": "100%", "frontend": "100%"},
+  "retest_needed": false,
+  "full_testing_deferred": true,
+  "notes": "Resend domain auth.classvia.in appears to be verified - email_sent=true was returned. The try/except resilience path in send_admission_email was therefore not triggered during this run, but the success path confirms wiring. Emergent badge overlay can intercept clicks on bottom-right FAB; tests should use force=True or hide the badge. This is a platform artifact, not an app bug."
+}
