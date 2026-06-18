@@ -41,6 +41,36 @@ export const ASSETS = {
     { src: `${A}/wy4l3nua_Photo%207.jpeg`, caption: 'Sports team with trophies', tag: 'Achievement' },
     { src: `${A}/l1cpa1tx_Photo%208.jpeg`, caption: 'Campus event gathering', tag: 'Events' },
     { src: `${A}/epzhik42_Photo%209.jpeg`, caption: 'Cultural festival celebration', tag: 'Events' },
+    { src: `${A}/qllzid2s_W%20Image%202026-06-17%20at%209.39.31%20PM.jpeg`, caption: 'Stylish students by campus ride', tag: 'Activities' },
+    { src: `${A}/vc19j8va_WhatsApp%20Image%202.jpeg`, caption: 'Student community gathering', tag: 'Events' },
+    { src: `${A}/r4f0oxyk_WhatsApp%20Imag%202026-06-17%20at%209.39.21%20PM.jpeg`, caption: 'Football tournament champions', tag: 'Achievement' },
+    { src: `${A}/t9ytlemi_WhatsAp%20Image%202026-06-17%20at%209.39.30%20PM.jpeg`, caption: 'Our newly painted campus', tag: 'Campus' },
+    { src: `${A}/np5g50q8_WhatsAp%20Image%202026-06-17%20at%209.39.21%20PM.jpeg`, caption: 'Educational field visit', tag: 'Events' },
+    { src: `${A}/i3xcy84l_WhatsApp%20Image%202026-06-1.jpeg`, caption: 'Onam celebration in traditional saree', tag: 'Events' },
+    { src: `${A}/5pagia8u_WhatsApp%20Image%202026-06-.jpeg`, caption: 'Live music night on campus', tag: 'Events' },
+    { src: `${A}/pkjyv15x_WhatsApp%20Image%202026-06.jpeg`, caption: 'Class in full focus', tag: 'Classroom' },
+    { src: `${A}/ptyh1fz4_WhatsApp%20Image%202026%20at%209.39.30%20PM.jpeg`, caption: 'Students with their mentor', tag: 'Activities' },
+    { src: `${A}/h5wchaid_WhatsApp%20Image%20202.jpeg`, caption: 'Doubt clearing session', tag: 'Classroom' },
+    { src: `${A}/vykw38lp_WhatsApp%20Image%202026-06-17%20at%209.39.18%20PM.jpeg`, caption: 'Students with their mentor', tag: 'Activities' },
+    { src: `${A}/d1ca2k82_WhatsApp%20Image%202026-06-17%20at%209.39.9%20PM.jpeg`, caption: 'Our girls of Kaizen', tag: 'Activities' },
+    { src: `${A}/0t3y8tj3_WhatsApp%20Image%202026-06-17%20at%209.3.jpeg`, caption: 'Peer-led classroom session', tag: 'Classroom' },
+    { src: `${A}/r395jwws_WhatsApp%20Image%202026-06-17%20at%209..21%20PM.jpeg`, caption: 'Family of learners', tag: 'Events' },
+    { src: `${A}/1eguw2l0_WhatsApp%20Image%202026-06-17%20a.jpeg`, caption: 'Football champions with trophy', tag: 'Achievement' },
+    { src: `${A}/uuf2xbgo_WhatsApp%20Image%202026-06-17%20at%209.39.22%20PM.jpe.jpeg`, caption: 'Classroom selfie with mentor', tag: 'Classroom' },
+    { src: `${A}/91lz7jy5_WhatsApp%20Image%202026-06-17%20at%209.39.20%20PM.jpeg`, caption: 'Best player trophy presentation', tag: 'Achievement' },
+    { src: `${A}/huztcbu6_WhatsApp%20Image%202026-06-17%20at%209.39.20%20PM.jeg.jpeg`, caption: 'Kaizen family group photo', tag: 'Events' },
+    { src: `${A}/s0hpxgnc_WhatsApp%20Image%202026-06-17%20at%209.39.19%20PM.jpeg`, caption: 'Star player awarded', tag: 'Achievement' },
+    { src: `${A}/pile2a5o_WhatsApp%20Image%202026-06-17%20at%209.39.19%20PM.jpe.jpeg`, caption: 'Whole batch outside campus', tag: 'Events' },
+    { src: `${A}/ibtobgcw_WhatsApp%20Image%202026-06-17%20at%209.39.26%20PM.j.jpeg`, caption: 'Batch gathering at campus', tag: 'Events' },
+    { src: `${A}/uuzyaac5_WhatsApp%20Image%202026-06-17%20at%209.39.24%20PM.jpeg`, caption: 'Focused study session', tag: 'Classroom' },
+    { src: `${A}/uryvdyxq_WhatsApp%20Image%202026-06-17%20at%209.39.24%20PM.jp.jpeg`, caption: 'Player of the match awarded', tag: 'Achievement' },
+    { src: `${A}/yu8hfuln_WhatsApp%20Image%202026-06-17%20at%209.39.24%20.jpeg`, caption: 'Quiet exam preparation', tag: 'Classroom' },
+    { src: `${A}/d4na97rx_WhatsApp%20Image%202026-06-17%20at%209.39.22%20PM.jpeg`, caption: 'Teacher guiding bright minds', tag: 'Classroom' },
+    { src: `${A}/0i6i88bk_WhatsApp%20Image%202026-06-17%20at%209.39.30%20PM.jpeg`, caption: 'Personal attention in class', tag: 'Classroom' },
+    { src: `${A}/mutp4pe8_WhatsApp%20Image%202026-06-17%20at%209.39.27%20PM.jpeg`, caption: 'Top scorer honoured', tag: 'Achievement' },
+    { src: `${A}/j5llgzdm_WhatsApp%20Image%202026-06-17%20at%209.39.27%20.jpeg`, caption: 'Open-air learning session', tag: 'Classroom' },
+    { src: `${A}/talcvgjw_WhatsApp%20Image%202026-06-17%20at%209.39.26%20PM.jpeg`, caption: 'Student-led lecture', tag: 'Classroom' },
+    { src: `${A}/zqjgmob8_WhatsApp%20Image%202026-06-17%20at%209.39.26%20PM.jpe.jpeg`, caption: 'Winning football squad', tag: 'Achievement' },
   ],
 };
 
@@ -52,7 +82,7 @@ export const GALLERY = [
   { src: ASSETS.campus[2], caption: 'Corner view of the campus', tag: 'Campus' },
 ];
 
-export const GALLERY_TAGS = ['All', 'Campus', 'Classroom', 'Achievement', 'Events'];
+export const GALLERY_TAGS = ['All', 'Campus', 'Classroom', 'Achievement', 'Events', 'Activities'];
 
 export const COURSE_CATEGORIES = [
   { id: 'school', label: 'School Coaching', accent: '#1D4ED8', icon: 'GraduationCap', blurb: 'Strong academic foundation for State Syllabus students from Class 8 to 12.', courses: ['State Syllabus', 'Class 8', 'Class 9', 'Class 10', 'Class 11', 'Class 12'] },
