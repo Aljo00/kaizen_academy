@@ -40,6 +40,13 @@ Build a world-class, premium, modern educational institution website for Kaizen 
 - ✅ Tested: 100% backend, 100% frontend pass (iteration_1.json)
 - ✅ Confirmed: Resend email actually delivered
 
+## Updates (18 Feb 2026)
+- ✅ Added `/gallery` page route
+- ✅ Removed all AI-generated stock photos; replaced with real Kaizen Academy photos
+- ✅ Added new batch of 5 photos (Photo 5–9): cultural attire, sports trophies, events
+- ✅ New gallery tag added: `Events`
+- ✅ Homepage "Courses Offered" counter updated from `15+` to `9`
+
 ## Backlog (P0 → P2)
 - P1: Admin dashboard to view enquiries (currently only GET endpoint, no UI)
 - P1: Live Instagram/YouTube feed embed (currently links only)

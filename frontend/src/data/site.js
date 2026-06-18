@@ -36,6 +36,11 @@ export const ASSETS = {
     { src: `${A}/jydwj4i8_Photo%203.jpeg`, caption: 'Topper recognition ceremony', tag: 'Achievement' },
     { src: `${A}/qfhh2zyh_Photo%204.jpeg`, caption: 'Toppers with mentor', tag: 'Achievement' },
     { src: `${A}/95xq0ovu_p%20Image%202026-06-17%20at%209.39.29%20PM.jpeg`, caption: 'Award ceremony', tag: 'Achievement' },
+    { src: `${A}/4uzozudu_Photo%205.jpeg`, caption: 'Students in traditional attire', tag: 'Events' },
+    { src: `${A}/z7g5tn6l_Photo6.jpeg`, caption: 'Cultural celebration moment', tag: 'Events' },
+    { src: `${A}/wy4l3nua_Photo%207.jpeg`, caption: 'Sports team with trophies', tag: 'Achievement' },
+    { src: `${A}/l1cpa1tx_Photo%208.jpeg`, caption: 'Campus event gathering', tag: 'Events' },
+    { src: `${A}/epzhik42_Photo%209.jpeg`, caption: 'Cultural festival celebration', tag: 'Events' },
   ],
 };
 
@@ -47,7 +52,7 @@ export const GALLERY = [
   { src: ASSETS.campus[2], caption: 'Corner view of the campus', tag: 'Campus' },
 ];
 
-export const GALLERY_TAGS = ['All', 'Campus', 'Classroom', 'Achievement'];
+export const GALLERY_TAGS = ['All', 'Campus', 'Classroom', 'Achievement', 'Events'];
 
 export const COURSE_CATEGORIES = [
   { id: 'school', label: 'School Coaching', accent: '#1D4ED8', icon: 'GraduationCap', blurb: 'Strong academic foundation for State Syllabus students from Class 8 to 12.', courses: ['State Syllabus', 'Class 8', 'Class 9', 'Class 10', 'Class 11', 'Class 12'] },
@@ -81,7 +86,7 @@ export const TESTIMONIALS = [
 
 export const STATS = [
   { value: 500, suffix: '+', label: 'Active Students' },
-  { value: 15, suffix: '+', label: 'Courses Offered' },
+  { value: 9, suffix: '', label: 'Courses Offered' },
   { value: 4, suffix: '', label: 'Academic Streams' },
   { value: 98, suffix: '%', label: 'Parent Trust Score' },
 ];
