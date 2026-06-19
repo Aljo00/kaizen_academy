@@ -13,7 +13,7 @@ export const SITE = {
   maps: 'https://maps.app.goo.gl/LNcFsB4vca9GZzuS7?g_st=ic',
   mapsEmbed: 'https://www.google.com/maps?q=Thrithala+Kerala+679534&output=embed',
   social: {
-    instagram: 'https://www.instagram.com/kaizen.academy',
+    instagram: 'https://www.instagram.com/kaizen.academy_',
     youtube: 'https://www.youtube.com/@kaizenacademythrithala3166',
     facebook: 'https://www.facebook.com/people/Kaizen-Academy-Thrithala/61582768923441/',
   },
