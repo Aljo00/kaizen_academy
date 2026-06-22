@@ -286,7 +286,7 @@ export default function Home() {
           </div>
           <div className="mt-10 md:mt-14 columns-2 md:columns-2 lg:columns-3 gap-3 md:gap-5 [column-fill:_balance]">
             {[...ASSETS.campus, ...ASSETS.activities.map((a) => a.src)]
-              .slice(0, 5)
+              .slice(0, 7)
               .map((src, i) => (
                 <motion.div
                   key={src}
