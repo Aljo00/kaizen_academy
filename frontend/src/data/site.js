@@ -26,6 +26,7 @@ export const ASSETS = {
   logo: `${A}/sa8sjh89_image.png`,
   founder: `${A}/crf7e7v1_image.png`,
   campus: [
+    '/Photo 11.jpeg',
     `${A}/cul5e93w_Gemini_Generated_Image_6662qi6662qi6662%20Copy.png`,
   ],
   activities: [
@@ -81,7 +82,11 @@ export const VIDEOS = [
 // Full gallery: videos + campus + activities combined (videos shown first)
 export const GALLERY = [
   ...VIDEOS,
-  { src: ASSETS.campus[0], caption: 'Our Campus — Kaizen Academy, Thrithala', tag: 'Campus' },
+  ...ASSETS.campus.map((src, index) => ({
+    src,
+    caption: index === 0 ? 'Our Campus — Kaizen Academy, Thrithala' : 'Campus life at Kaizen Academy',
+    tag: 'Campus',
+  })),
   ...ASSETS.activities,
 ];
 
