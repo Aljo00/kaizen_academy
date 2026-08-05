@@ -1,30 +1,91 @@
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, GraduationCap, BarChart3, Briefcase, Stethoscope, Users, UserCheck, Target, Building2, Quote, Compass, Award, Map as MapIcon, BookOpenCheck, Users2, LineChart, Instagram, Youtube, Facebook, Star } from 'lucide-react';
-import ParticleNetwork from '../components/ParticleNetwork';
-import AnimatedCounter from '../components/AnimatedCounter';
-import { SITE, ASSETS, COURSE_CATEGORIES, WHY_FEATURES, WHY_CHOOSE, TESTIMONIALS, STATS } from '../data/site';
-import { useEffect, useState } from 'react';
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import {
+  ArrowRight,
+  Sparkles,
+  GraduationCap,
+  BarChart3,
+  Briefcase,
+  Stethoscope,
+  Users,
+  UserCheck,
+  Target,
+  Building2,
+  Quote,
+  Compass,
+  Award,
+  Map as MapIcon,
+  BookOpenCheck,
+  Users2,
+  LineChart,
+  Instagram,
+  Youtube,
+  Facebook,
+  Star,
+} from "lucide-react";
+import ParticleNetwork from "../components/ParticleNetwork";
+import AnimatedCounter from "../components/AnimatedCounter";
+import {
+  SITE,
+  ASSETS,
+  COURSE_CATEGORIES,
+  WHY_FEATURES,
+  WHY_CHOOSE,
+  TESTIMONIALS,
+  STATS,
+} from "../data/site";
+import { useEffect, useState } from "react";
 
-const ICONS = { GraduationCap, BarChart3, Briefcase, Stethoscope, Users, UserCheck, Target, Building2, Compass, Award, Map: MapIcon, BookOpenCheck, Users2, LineChart };
+const ICONS = {
+  GraduationCap,
+  BarChart3,
+  Briefcase,
+  Stethoscope,
+  Users,
+  UserCheck,
+  Target,
+  Building2,
+  Compass,
+  Award,
+  Map: MapIcon,
+  BookOpenCheck,
+  Users2,
+  LineChart,
+};
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
-  show: (i = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: i * 0.08 } }),
+  show: (i = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: i * 0.08 },
+  }),
 };
 
-function Section({ children, className = '', id }) {
-  return <section id={id} className={`relative py-16 md:py-32 ${className}`}>{children}</section>;
+function Section({ children, className = "", id }) {
+  return (
+    <section id={id} className={`relative py-16 md:py-32 ${className}`}>
+      {children}
+    </section>
+  );
 }
 
 function Eyebrow({ children }) {
-  return <div className="inline-flex items-center gap-2 text-[11px] tracking-[0.3em] uppercase text-slate-500 font-semibold"><span className="h-px w-8 bg-slate-300" />{children}</div>;
+  return (
+    <div className="inline-flex items-center gap-2 text-[11px] tracking-[0.3em] uppercase text-slate-500 font-semibold">
+      <span className="h-px w-8 bg-slate-300" />
+      {children}
+    </div>
+  );
 }
 
 export default function Home() {
   const [tIndex, setTIndex] = useState(0);
   useEffect(() => {
-    const t = setInterval(() => setTIndex((i) => (i + 1) % TESTIMONIALS.length), 5000);
+    const t = setInterval(
+      () => setTIndex((i) => (i + 1) % TESTIMONIALS.length),
+      5000,
+    );
     return () => clearInterval(t);
   }, []);
 
@@ -53,7 +114,7 @@ export default function Home() {
               data-testid="hero-badge"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-rose-500 animate-pulse" />{" "}
-              Admissions Open · 2025 Batch
+              Admissions Open · 2026 Batch
             </span>
             <h1 className="font-display mt-5 md:mt-7 text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight font-light text-slate-900 text-balance max-w-4xl leading-[1.05]">
               The Builders of{" "}
@@ -284,28 +345,24 @@ export default function Home() {
               focus.
             </p>
           </div>
-          <div className="mt-10 md:mt-14 columns-2 md:columns-2 lg:columns-3 gap-3 md:gap-5 [column-fill:_balance]">
-            {[...ASSETS.campus, ...ASSETS.activities.map((a) => a.src)]
-              .slice(0, 7)
-              .map((src, i) => (
-                <motion.div
-                  key={src}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.7, delay: (i % 3) * 0.08 }}
-                  className="mb-5 break-inside-avoid relative group overflow-hidden rounded-2xl border border-slate-100 bg-slate-100"
-                  data-testid={`campus-img-${i}`}
-                >
-                  <img
-                    src={src}
-                    alt="Kaizen Campus"
-                    loading="lazy"
-                    className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                </motion.div>
-              ))}
+          <div className="mt-10 md:mt-14 grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-5">
+            {ASSETS.campus.slice(0, 6).map((src, i) => (
+              <div
+                key={src}
+                className="mb-5 relative overflow-hidden rounded-2xl border border-slate-100 bg-slate-100"
+                data-testid={`campus-img-${i}`}
+              >
+                <img
+                  src={src}
+                  alt="Kaizen Campus"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
+                  className="w-full h-full min-h-[180px] object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              </div>
+            ))}
           </div>
           <div className="mt-12 flex justify-center">
             <Link

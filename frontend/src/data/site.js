@@ -1,3 +1,15 @@
+import IMG_0135 from "../public/IMG_0135.webp";
+import IMG_0985 from "../public/IMG_0985.webp";
+import IMG_1023 from "../public/IMG_1023.webp";
+import IMG_2760 from "../public/IMG_2760.webp";
+import IMG_3080 from "../public/IMG_3080.webp";
+import IMG_3296 from "../public/IMG_3296.opt.webp";
+import IMG_3304 from "../public/IMG_3304.opt.webp";
+import IMG_3306 from "../public/IMG_3306.opt.webp";
+import IMG_3525 from "../public/IMG_3525.webp";
+import IMG_3780 from "../public/IMG_3780.webp";
+import FOUNDER_IMAGE from "../public/Founder Photo/IMG_3269.webp";
+
 export const SITE = {
   name: "Kaizen Academy",
   location: "Thrithala",
@@ -28,10 +40,18 @@ const A =
 
 export const ASSETS = {
   logo: `${A}/sa8sjh89_image.png`,
-  founder: `${A}/crf7e7v1_image.png`,
+  founder: FOUNDER_IMAGE,
   campus: [
-    "/Photo 11.jpeg",
-    `${A}/cul5e93w_Gemini_Generated_Image_6662qi6662qi6662%20Copy.png`,
+    IMG_0135,
+    IMG_0985,
+    IMG_1023,
+    IMG_2760,
+    IMG_3080,
+    IMG_3296,
+    IMG_3304,
+    IMG_3306,
+    IMG_3525,
+    IMG_3780,
   ],
   activities: [
     {
@@ -255,9 +275,8 @@ export const VIDEOS = [
   },
 ];
 
-// Full gallery: videos + campus + activities combined (videos shown first)
+// Full gallery: campus + videos + activities combined (new campus images shown first)
 export const GALLERY = [
-  ...VIDEOS,
   ...ASSETS.campus.map((src, index) => ({
     src,
     caption:
@@ -266,6 +285,7 @@ export const GALLERY = [
         : "Campus life at Kaizen Academy",
     tag: "Campus",
   })),
+  ...VIDEOS,
   ...ASSETS.activities,
 ];
 
