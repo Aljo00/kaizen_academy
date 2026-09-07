@@ -354,7 +354,9 @@ export default function Home() {
                 <div
                   key={it.src}
                   className="mb-5 relative overflow-hidden rounded-2xl border border-slate-100 bg-slate-100"
-                  data-testid={isVideo ? `campus-video-${i}` : `campus-img-${i}`}
+                  data-testid={
+                    isVideo ? `campus-video-${i}` : `campus-img-${i}`
+                  }
                 >
                   {isVideo ? (
                     <>
