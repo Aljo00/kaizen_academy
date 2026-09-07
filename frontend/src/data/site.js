@@ -249,6 +249,19 @@ export const ASSETS = {
 
 // Video content
 export const VIDEOS = [
+  // Onam videos (Cloudinary direct mp4 links)
+  {
+    src: "https://res.cloudinary.com/dux2ya5rb/video/upload/IMG_8252_x66jtz.mp4",
+    caption: "Onam Celebration 2026 — Highlights",
+    tag: "onam celebration 2026",
+    type: "video",
+  },
+  {
+    src: "https://res.cloudinary.com/dux2ya5rb/video/upload/IMG_8275_t80anr.mp4",
+    caption: "Onam Celebration 2026 — Highlights 2",
+    tag: "onam celebration 2026",
+    type: "video",
+  },
   {
     src: `${A}/fmhg5y3g_Video%201.mp4`,
     caption: "Life at Kaizen — Episode 1",
@@ -275,8 +288,9 @@ export const VIDEOS = [
   },
 ];
 
-// Full gallery: campus + videos + activities combined (new campus images shown first)
+// Full gallery: videos first, then campus images, then activities
 export const GALLERY = [
+  ...VIDEOS,
   ...ASSETS.campus.map((src, index) => ({
     src,
     caption:
@@ -285,7 +299,6 @@ export const GALLERY = [
         : "Campus life at Kaizen Academy",
     tag: "Campus",
   })),
-  ...VIDEOS,
   ...ASSETS.activities,
 ];
 
@@ -297,6 +310,8 @@ export const GALLERY_TAGS = [
   "Achievement",
   "Events",
   "Activities",
+  // Custom event tag for Onam videos
+  "onam celebration 2026",
 ];
 
 export const COURSE_CATEGORIES = [

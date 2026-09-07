@@ -22,12 +22,14 @@ import {
   Youtube,
   Facebook,
   Star,
+  Play,
 } from "lucide-react";
 import ParticleNetwork from "../components/ParticleNetwork";
 import AnimatedCounter from "../components/AnimatedCounter";
 import {
   SITE,
   ASSETS,
+  GALLERY,
   COURSE_CATEGORIES,
   WHY_FEATURES,
   WHY_CHOOSE,
@@ -346,23 +348,45 @@ export default function Home() {
             </p>
           </div>
           <div className="mt-10 md:mt-14 grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-5">
-            {ASSETS.campus.slice(0, 6).map((src, i) => (
-              <div
-                key={src}
-                className="mb-5 relative overflow-hidden rounded-2xl border border-slate-100 bg-slate-100"
-                data-testid={`campus-img-${i}`}
-              >
-                <img
-                  src={src}
-                  alt="Kaizen Campus"
-                  loading="lazy"
-                  decoding="async"
-                  fetchpriority="low"
-                  className="w-full h-full min-h-[180px] object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              </div>
-            ))}
+            {GALLERY.slice(0, 6).map((it, i) => {
+              const isVideo = it.type === "video";
+              return (
+                <div
+                  key={it.src}
+                  className="mb-5 relative overflow-hidden rounded-2xl border border-slate-100 bg-slate-100"
+                  data-testid={isVideo ? `campus-video-${i}` : `campus-img-${i}`}
+                >
+                  {isVideo ? (
+                    <>
+                      <video
+                        src={it.src}
+                        muted
+                        loop
+                        playsInline
+                        autoPlay
+                        preload="metadata"
+                        className="w-full h-full min-h-[180px] object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                      <div className="absolute top-3 right-3 h-9 w-9 rounded-full bg-black/40 backdrop-blur text-white flex items-center justify-center">
+                        <Play className="h-4 w-4 fill-current" />
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <img
+                        src={it.src}
+                        alt={it.caption || "Kaizen Campus"}
+                        loading="lazy"
+                        decoding="async"
+                        fetchpriority="low"
+                        className="w-full h-full min-h-[180px] object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </>
+                  )}
+                </div>
+              );
+            })}
           </div>
           <div className="mt-12 flex justify-center">
             <Link
